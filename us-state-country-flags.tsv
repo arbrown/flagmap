@@ -1,0 +1,61 @@
+id	code	name	flagimg	scalex	scaley	countryname	countrypopulation
+1	AL	Alabama	Ireland.png	1	0	Ireland	6378000
+2	AK	Alaska	Guyana.png	1	0	Guyana	735554
+4	AZ	Arizona	Paraguay.png	0	1	Paraguay	6783272
+5	AR	Arkansas	Lithuania.png	0	1	Lithuania	2869690
+6	CA	California	Sudan.png	0	1	Sudan	40235000
+8	CO	Colorado	Finland.png	1	1	Finland	5488543
+9	CT	Connecticut	Moldova.png	0	1	Moldova	2913281
+10	DE	Delaware	Swaziland.png	0	1	Swaziland	1119000
+11	DC	District of Columbia					
+12	FL	Florida	Niger.png	0	1	Niger	17138707
+13	GA	Georgia	Portugal.png	1	1	Portugal	10427301
+15	HI	Hawaii	Bahrain.png	1	1	Bahrain	1343000
+16	ID	Idaho	Guinea-Bissau.png	0	1	Guinea-Bissau	1693398
+17	IL	Illinois	Guinea.png	1	0	Guinea	8746128
+18	IN	Indiana	Laos.png	0	1	Laos	6803699
+19	IA	Iowa	Mongolia.png	0	1	Mongolia	3081677
+20	KS	Kansas	Jamaica.png	1	0	Jamaica	2950210
+21	KY	Kentucky	Oman.png	0	1	Oman	4441448
+22	LA	Louisiana	New_Zealand.png	1	1	New Zealand	4700230
+23	ME	Maine	Estonia.png	1	1	Estonia	1315944
+24	MD	Maryland	Lebanon.png	0	1	Lebanon.png	4467000
+25	MA	Massachusetts	El_Salvador.svg.png	0	1	El Salvador	6377195
+26	MI	Michigan	Sweden.png	1	1	Sweden	9875378
+27	MN	Minnesota	Denmark.png	1	1	Denmark	5707251
+28	MS	Mississippi	Albania.png	0	1	Albania	2886026
+29	MO	Missouri	Kyrgyzstan.png	0	1	Kyrgyzstan	6000000
+30	MT	Montana	Djibouti.png	1	0	Djibouti	828324
+31	NE	Nebraska	Lesotho.png	1	0	Lesotho	2067000
+32	NV	Nevada	Qatar.png	1	0	Qatar	2545603
+33	NH	New Hampshire	Trinidad_and_Tobago.png	0	1	Trinidad and Tobago	1349667
+34	NJ	New Jersey	Austria.png	1	1	Austria	8662588
+35	NM	New Mexico	Macedonia.png	0	1	Macedonia	2069162
+36	NY	New York	Romania.png	1	0	Romania	19511000
+37	NC	North Carolina	Dominican_Republic.png	1	0	Dominican Republic	10075045
+38	ND	North Dakota	Bhutan.png	1	0	Bhutan	742737
+39	OH	Ohio	Rwanda.png	1	1	Rwanda	11262564
+40	OK	Oklahoma	Panama.png	1	0	Panama	3929141
+41	OR	Oregon	Bulgaria.png	1	1	Bulgaria	7202198
+42	PA	Pennsylvania	South_Sudan.png	1	0	South Sudan	12340000
+44	RI	Rhode Island	Cyprus.png	1	0	Cyprus	1141166
+45	SC	South Carolina	Costa_Rica.png	1	0	Costa Rica	4586353
+46	SD	South Dakota	Cyprus.png	1	0	Cyprus	1141166
+47	TN	Tennessee	Libya.png	1	0	Libya	6411776
+48	TX	Texas	Yemen.png	1	1	Yemen	25408000
+49	UT	Utah	Armenia.png	1	1	Armenia	2998600
+50	VT	Vermont	Fiji.png	1	1	Fiji	909389
+51	VA	Virginia	Switzerland.png	1	0	Switzerland	8341000
+53	WA	Washington	Kuwait.png	1	0	Kuwait	4187161
+54	WV	West Virginia	Kosovo.png	1	0	Kosovo	1859203
+55	WI	Wisconsin	Singapore.png	0	1	Singapore	5535000
+56	WY	Wyoming	Montenegro.png	1	1	Montenegro	676872
+60	AS	America Samoa					
+64	FM	Federated States of Micronesia					
+66	GU	Guam					
+68	MH	Marshall Islands					
+69	MP	Northern Mariana Islands					
+70	PW	Palau					
+72	PR	Puerto Rico					
+74	UM	U.S. Minor Outlying Islands					
+78	VI	Virgin Islands of the United States					
