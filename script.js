@@ -1,7 +1,7 @@
 var width = 800,
     height = 600;
 
-
+// set up Albers projection function
 var projection = d3.geo.albersUsa()
     .scale(1000)
     .translate([400, height / 2]);
@@ -19,7 +19,6 @@ svg.append("rect")
     .attr("fill", "transparent")
     .attr("width", width)
     .attr("height", height);
-//    .on("click", clicked);
 
 var g = svg.append("g");
 
@@ -27,6 +26,7 @@ d3.json("us.json", function(unitedState) {
   var data = topojson.feature(unitedState, unitedState.objects.states).features;
   d3.tsv("us-state-country-flags.tsv", function(tsv){
     var info = {};
+    // map state id numbers to info about the state / country flag
     tsv.forEach(function(d,i){
       info[d.id] = {
         name: d.name, flag: d.flagimg,
@@ -35,6 +35,8 @@ d3.json("us.json", function(unitedState) {
       };
     });
 
+    // draw the WHOLE map once, just to get the size of each state for
+    // its flag background.  There's almost certainly a better way to do this ;)
     g.append("g")
       .attr("class", "states-bundle")
       .selectAll("path")
@@ -58,10 +60,18 @@ d3.json("us.json", function(unitedState) {
           var flagx= origflagx;
           var flagy = origflagy;
 
+          // This is the result of several iterations of flag size (and postion)
+          // scaling.  I really didn't want to do it custom for each flag, and
+          // this seems like it does a reasonable job, provided I tell it how to
+          // scale.  If I ever refactor, this would be a good spot to start.
+          // I *should* figure out the aspect ratio of the bounding rectangle of
+          // each state (or better yet, something based on center of mass so that
+          // Alaska's Islands don't stretch its rectangle further than it reasonably
+          // seems) and then do the right scaling/ translation based on that,
+          // but I'm not quite sure how that would work yet...
           if (info[d.id].scalex != 0){
             flagx = origflagx * (statex/origflagx) * 1.1;
             flagy = origflagy * (statex/origflagx) * 1.1;
-            //dy = dy - flagy/3;
           }
 
           if (info[d.id].scaley != 0) {
@@ -70,6 +80,7 @@ d3.json("us.json", function(unitedState) {
             dx = dx - flagx/3;
           }
 
+          // Create the 'pattern' for each state shape.
           defs.append("pattern")
             .attr("id", "flag"+ d.id)
             .attr("patternUnits", "userSpaceOnUse")
@@ -83,10 +94,11 @@ d3.json("us.json", function(unitedState) {
             .attr("x", 0)
             .attr("y", 0);
           }
-
+          // remove the invisible/fake state shapes.
           this.remove();
       });
 
+      // draw the actual map
     g.append("g")
       .attr("class", "states-bundle")
       .selectAll("path")
@@ -97,6 +109,7 @@ d3.json("us.json", function(unitedState) {
       .attr("stroke", "gray")
       .attr("class", "states")
       .style("fill",function(d){ return "url(#flag" + d.id +")"; })
+      // add an informative tooltip
       .on("mousemove", function(d) {
         var state = info[d.id];
         var html = "";
@@ -136,25 +149,5 @@ d3.json("us.json", function(unitedState) {
             $(this).attr("fill-opacity", "1.0");
             $("#tooltip-container").hide();
         });
-
-     /*g.append("g")
-      .attr("class", "states-names")
-      .selectAll("text")
-      .data(data)
-      .enter()
-      .append("svg:text")
-      .text(function(d){
-        return info[d.id].name;
-      })
-      .attr("x", function(d){
-          return path.centroid(d)[0];
-      })
-      .attr("y", function(d){
-          return  path.centroid(d)[1];
-      })
-      .attr("text-anchor","middle")
-      .attr('fill', 'white');*/
-
-
   });
 });
