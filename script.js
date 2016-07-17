@@ -11,7 +11,8 @@ var path = d3.geo.path()
 
 var svg = d3.select("body").append("svg")
     .style("width", width)
-    .style("height", height);
+    .style("height", height)
+    .attr("class", "flagmap");
 
 var defs = svg.append('svg:defs');
 svg.append("rect")
@@ -27,7 +28,11 @@ d3.json("us.json", function(unitedState) {
   d3.tsv("us-state-country-flags.tsv", function(tsv){
     var info = {};
     tsv.forEach(function(d,i){
-      info[d.id] = {name: d.name, flag: d.flagimg, scalex: d.scalex, scaley: d.scaley};
+      info[d.id] = {
+        name: d.name, flag: d.flagimg,
+        scalex: d.scalex, scaley: d.scaley,
+        country: d.countryname, population: d.countrypopulation
+      };
     });
 
     g.append("g")
@@ -39,7 +44,7 @@ d3.json("us.json", function(unitedState) {
       .attr("d", path)
       .each(function(d,i){
         var flag = new Image();
-        flag.src = info[d.id].flag;
+        flag.src = "flags/" + info[d.id].flag;
         var statex = this.getBBox().width;
         var statey = this.getBBox().height;
 
@@ -72,7 +77,7 @@ d3.json("us.json", function(unitedState) {
             .attr("height", flagy)
             .attr("patternTransform", "translate("+ dx + " " + dy + ")")
             .append("svg:image")
-            .attr("xlink:href", info[d.id].flag)
+            .attr("xlink:href", "flags/"+info[d.id].flag)
             .attr("width", flagx)
             .attr("height", flagy)
             .attr("x", 0)
@@ -91,7 +96,46 @@ d3.json("us.json", function(unitedState) {
       .attr("d", path)
       .attr("stroke", "gray")
       .attr("class", "states")
-      .style("fill",function(d){ return "url(#flag" + d.id +")"; });
+      .style("fill",function(d){ return "url(#flag" + d.id +")"; })
+      .on("mousemove", function(d) {
+        var state = info[d.id];
+        var html = "";
+        html += "<table>";
+        html += "<tr class = 'statename'><td>"+ state.name? state.name : "" + "</tr></td>";
+        html += "<tr class = 'countryname'><td>";
+        html += state.country ? state.country : "";
+        html += "</td></tr>";
+        html += "<tr><td>";
+        html += "<div class='tooltipflag'><img src=flags/" + state.flag + "></div>";
+        html += "</td></tr>";
+        html += "<tr class='countrypopulation'><td>";
+        html += "Population: " + new Number(state.population).toLocaleString();
+        html += " </td></tr>";
+
+
+        $("#tooltip-container").html(html);
+        $(this).attr("fill-opacity", "0.8");
+        $("#tooltip-container").show();
+
+        var coordinates = d3.mouse(this);
+
+        var map_width = svg.node().getBBox().width;
+
+        if (d3.event.layerX < map_width / 2) {
+          d3.select("#tooltip-container")
+            .style("top", (d3.event.layerY + 15) + "px")
+            .style("left", (d3.event.layerX + 15) + "px");
+        } else {
+          var tooltip_width = $("#tooltip-container").width();
+          d3.select("#tooltip-container")
+            .style("top", (d3.event.layerY + 15) + "px")
+            .style("left", (d3.event.layerX - tooltip_width - 30) + "px");
+        }
+    })
+    .on("mouseout", function() {
+            $(this).attr("fill-opacity", "1.0");
+            $("#tooltip-container").hide();
+        });
 
      /*g.append("g")
       .attr("class", "states-names")
@@ -110,5 +154,7 @@ d3.json("us.json", function(unitedState) {
       })
       .attr("text-anchor","middle")
       .attr('fill', 'white');*/
+
+
   });
 });
