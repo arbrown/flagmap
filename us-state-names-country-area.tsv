@@ -1,0 +1,51 @@
+id	code	name	sqmi	sqkm	closestcountry	closestarea	flagimg
+1	AL	Alabama	52420.07	135767	Greece	131990	Greece.png
+2	AK	Alaska	665384.04	1723337	Libya	1759540	Libya.png
+4	AZ	Arizona	113990.3	295234	Philippines	300000	Phillipines.png
+5	AR	Arkansas	53178.55	137732	Tajikistan	143100	Tajikistan.png
+6	CA	California	163694.74	423967	Iraq	438317	Iraq.png
+8	CO	Colorado	104093.67	269601	New Zealand	270467	New_Zealand.png
+9	CT	Connecticut	5543.41	14357	Bahamas	13943	Bahamas.png
+10	DE	Delaware	2488.72	6446	Brunei	5765	Brunei.png
+12	FL	Florida	65757.7	170312	Uruguay	176215	Uruguay.png
+13	GA	Georgia	59425.15	153910	Bangladesh	147570	Bangladesh.png
+15	HI	Hawaii	10931.72	28313	Equatorial Guinea	28051	Equatorial_Guinea.png
+16	ID	Idaho	83568.95	216443	Guyana	214969	Guyana.png
+17	IL	Illinois	57913.55	149995	Bangladesh	147570	Bangladesh.png
+18	IN	Indiana	36419.55	94326	Hungary	93028	Hungary.png
+19	IA	Iowa	56272.81	145746	Nepal	147181	Nepal.png
+20	KS	Kansas	82278.36	213100	Guyana	214969	Guyana.png
+21	KY	Kentucky	40407.8	104656	Iceland	103000	Iceland.png
+22	LA	Louisiana	52378.13	135659	Greece	131990	Greece.png
+23	ME	Maine	35379.74	91633	Portugal	92090	Portugal.png
+24	MD	Maryland	12405.93	32131	Belgium	30528	Belgium.png
+25	MA	Massachusetts	10554.39	27336	Haiti	27750	Haiti.png
+26	MI	Michigan	96713.51	250487	Guinea	245857	Guinea.png
+27	MN	Minnesota	86935.83	225163	Guyana	214969	Guyana.png
+28	MS	Mississippi	48431.78	125438	North Korea	120538	North_Korea.png
+29	MO	Missouri	69706.99	180540	Cambodia	181035	Cambodia.png
+30	MT	Montana	147039.71	380831	Japan	377930	Japan.png
+31	NE	Nebraska	77347.81	200330	Kyrgyzstan	199951	Kyrgyzstan.png
+32	NV	Nevada	110571.82	286380	Ecuador	276841	Ecuador.png
+33	NH	New Hampshire	9349.16	24214	Djibouti	23200	Djibouti.png
+34	NJ	New Jersey	8722.58	22591	Belize	22966	Belize.png
+35	NM	New Mexico	121590.3	314917	Poland	312679	Poland.png
+36	NY	New York	54554.98	141297	Tajikistan	143100	Tajikistan.png
+37	NC	North Carolina	53819.16	139391	Tajikistan	143100	Tajikistan.png
+38	ND	North Dakota	70698.32	183108	Syria	185180	Syria.png
+39	OH	Ohio	44825.58	116098	Benin	114763	Benin.png
+40	OK	Oklahoma	69898.87	181037	Cambodia	181035	Cambodia.png
+41	OR	Oregon	98378.54	254799	Guinea	245857	Guinea.png
+42	PA	Pennsylvania	46054.35	119280	Malawi	118484	Malawi.png
+44	RI	Rhode Island	1544.89	4001	Cape Verde	4033	Cape_Verde.png
+45	SC	South Carolina	32020.49	82933	United Arab Emirates	83600	United_Arab_Emirates.png
+46	SD	South Dakota	77115.68	199729	Kyrgyzstan	199951	Kyrgyzstan.png
+47	TN	Tennessee	42144.25	109153	Guatemala	108889	Guatemala.png
+48	TX	Texas	268596.46	695662	Myanmar	676578	Myanmar.png
+49	UT	Utah	84896.88	219882	Guyana	214969	Guyana.png
+50	VT	Vermont	9616.36	24906	Macedonia	25713	Macedonia.png
+51	VA	Virginia	42774.93	110787	Bulgaria	110879	Bulgaria.png
+53	WA	Washington	71297.95	184661	Syria	185180	Syria.png
+54	WV	West Virginia	24230.04	62756	Latvia	64559	Latvia.png
+55	WI	Wisconsin	65496.38	169635	Suriname	163820	Suriname.png
+56	WY	Wyoming	97813.01	253335	Guinea	245857	Guinea.png
